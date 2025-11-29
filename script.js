@@ -4,9 +4,9 @@
 ```javascript
 // 100 slots placeholder albumsData
 const albumsData = Array.from({length: 100}, (_, i) => ({
-  cover: `albums/${String(i+1).padStart(2,'0')}.jpg`,
-  name: `Album ${i+1}`,
-  artist: `Artist ${i+1}`,
+  cover: `albums/koinoyokan.jpg`,
+  name: ` Koi No Yokan `,
+  artist: ` DEFTONES `,
   color: '#ffb6d5'  // soft pink default
 }));
 
