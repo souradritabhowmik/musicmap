@@ -1,62 +1,33 @@
---- `styles.css` ---
-position:relative;
-height:var(--tile-size);
-border-radius:var(--radius);
-overflow:hidden;
-cursor:pointer;
-transition: transform 260ms cubic-bezier(.2,.9,.23,1), box-shadow 260ms ease;
-display:flex;
-align-items:flex-end;
-padding:10px;
-color:white;
-font-weight:600;
+:root{
+  --bg1:#fff0f5;
+  --bg2:#ffdff2;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+}
+.wrap{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
 }
 
-
-.tile:hover{transform: translateY(-6px) scale(1.03); box-shadow: 0 18px 40px rgba(120,20,60,0.12)}
-
-
-.tile img{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:0;
-opacity:0.25; /* let color show through */
-transition: opacity 300ms ease, transform 400ms ease;
-}
-.tile:hover img{opacity:0.35; transform: scale(1.06)}
-
-
-.tile .label{
-position:relative; z-index:1; font-size:0.85rem; text-shadow: 0 6px 20px rgba(0,0,0,0.25);
+/* Image takes as much space as possible while keeping aspect ratio */
+#music-map{
+  max-width:100%;
+  max-height:100vh;
+  object-fit:contain;
+  border-radius:10px;
+  box-shadow: 0 20px 60px rgba(120,30,70,0.12);
+  display:block;
 }
 
-
-/* Empty tile style */
-.tile.empty{justify-content:center; align-items:center; font-weight:700; color:#63344a}
-.tile.empty::after{content:'+'; font-size:28px}
-
-
-/* Modal */
-.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:1000}
-.modal.show{display:flex}
-.modal-backdrop{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.32), rgba(0,0,0,0.48)); backdrop-filter: blur(4px)}
-.modal-content{position:relative; width:min(900px,94%); max-height:90vh; overflow:auto; border-radius:18px; z-index:2; background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,248,251,0.98)); box-shadow:0 30px 80px rgba(115,20,50,0.18); padding:18px}
-.modal-body{display:flex; gap:18px; align-items:center}
-.modal-body img{width:320px; height:320px; object-fit:cover; border-radius:10px}
-.modal-info{flex:1}
-.modal-info h2{margin:0 0 6px 0}
-.modal-info p{margin:0;color:#6b445d}
-
-
-.modal-close{position:absolute; right:12px; top:8px; background:none; border:none; font-size:28px; cursor:pointer; color:#7a465b}
-
-
-/* Responsive tweaks */
-@media (max-width:720px){
-.modal-body{flex-direction:column}
-.modal-body img{width:80%; height:auto}
-}
-```
