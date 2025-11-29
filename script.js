@@ -23,7 +23,9 @@ window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal();
 // initial render
 renderGrid();
 
-
-
-
-Tell me which of those you'd like next, or if you want me to adjust visual details (color palette, tile size, animations).
+albumsData[0] = {
+  cover: 'albums/01.jpg',
+  name: 'Stratosphere',
+  artist: 'Duster',
+  color: '#ffb6d5'
+};
