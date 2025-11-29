@@ -1,41 +1,15 @@
---- `index.html` ---
-
-
-```html
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Music Map — My Albums</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music Map</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header">
-<h1>Music Map</h1>
-<p class="subtitle">A private-curated mosaic of my favourite albums</p>
-</header>
-
-
-<main>
-<section id="grid" class="album-grid" aria-live="polite"></section>
-</main>
-
-<div id="modal" class="modal" aria-hidden="true">
-<div class="modal-backdrop" id="modal-backdrop"></div>
-<div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-<button id="modal-close" class="modal-close" aria-label="Close">×</button>
-<div class="modal-body">
-<img id="modal-cover" alt="Album cover" />
-<div class="modal-info">
-<h2 id="modal-title"></h2>
-<p id="modal-artist"></p>
-</div>
-</div>
-</div>
-</div>
-
-<script src="script.js"></script>
+  <main class="wrap">
+    <img id="music-map" src="mymusic.png" alt=" rita's music " />
+    <a id="download" href="music-map.png" download> x </a>
+  </main>
 </body>
 </html>
-```
